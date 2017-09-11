@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4876647246536988}
   - component: {fileID: 212001317172988580}
   - component: {fileID: 60981629907299778}
+  - component: {fileID: 114444749324617190}
   m_Layer: 0
   m_Name: enemyShip
   m_TagString: Untagged
@@ -35,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1338552085585040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.02, z: 0}
+  m_LocalPosition: {x: -9.39, y: 3.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -139,6 +140,24 @@ PolygonCollider2D:
       - {x: 0.17, y: 0.08}
       - {x: 0.19, y: 0.06}
       - {x: 0.19, y: -0.02}
+--- !u!114 &114444749324617190
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1338552085585040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a987c368c4dfee4a88c94ac72c6ae2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
+  xTargetPos: 9
+  yTargetPos: -6
+  horizontalMovementCurve: 2
+  horizontalAnimLoop: 2
+  verticalMovementCurve: 21
+  verticalAnimLoop: 0
 --- !u!212 &212001317172988580
 SpriteRenderer:
   m_ObjectHideFlags: 1
