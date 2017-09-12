@@ -5,10 +5,12 @@ using UnityEngine;
 public class BulletSpawner : MonoBehaviour {
 
     // Time interval for spawning
-    public float timeCount = 0f;
+    private float timeCount = 0f;
+    private int spawnCount = 0;
+    public int spawnInterval = 4;
     public float timeInterval = 2f;
 
-	public GameObject Bullet;
+	public GameObject m_bullet;
 
 	// Use this for initialization
 	void Start () {
@@ -17,11 +19,16 @@ public class BulletSpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        
         timeCount += Time.deltaTime;
 
 		if (timeCount >= timeInterval) {
-			Instantiate (Bullet, this.transform.position, this.transform.rotation);
-			timeCount = 0f;
+            Instantiate(m_bullet, this.transform.position, this.transform.rotation);
+            spawnCount++;
+            if (spawnCount > spawnInterval){
+                timeCount = 0f;
+                spawnCount = 0;
+            }
 		}
 	}
 }
